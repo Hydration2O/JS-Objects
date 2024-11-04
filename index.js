@@ -23,6 +23,7 @@ const library = {
 };
 console.log(library.book.Title);
 console.log(library.book["Published Year"]);
+console.log(library.book);
 
 /*****************************************************************
 Part 2: Modifying Objects
@@ -36,8 +37,9 @@ Task 4) The book has been assigned an ISBN number. Add a property 'ISBN' with a 
 Task 5) Modify the 'publishedYear' to 2021 as a new edition has been released.
 ******************************************************************/
 library.book.pageCount = 1096;
-library.book.ISBN = 978 - 1491952023;
+library.book.ISBN = "978 - 1491952023";
 library.book["Published Year"] = 2021;
+console.log(library.book);
 
 /*****************************************************************
 Part 3: Advanced Object Operations 
@@ -55,15 +57,31 @@ library.book.Author = ["David Flanagan", "Another Author"];
 let reviewer1;
 let reviewer2;
 library.book.reviews=[reviewer1,reviewer2];
-library.book.reviews.reviewer1 = {
+library.book.reviews[0] = {
     reviewer: "Book Critic",
     comment: "A comprehensive guide to JavaScript.",
   }
-library.book.reviews.reviewer2={
+library.book.reviews[1]={
     reviewer: "bob",
     comment: "I hate this book",
   }
-console.log(library.book.reviews.reviewer1.reviewer);
-console.log(library.book.reviews.reviewer1.comment);
-console.log(library.book.reviews.reviewer2.reviewer);
-console.log(library.book.reviews.reviewer2.comment);
+console.log(library.book.reviews[0].reviewer);
+console.log(library.book.reviews[0].comment);
+console.log(library.book.reviews[1].reviewer);
+console.log(library.book.reviews[1].comment);
+
+console.log(library.book);
+
+const something = {
+  0: "dsfdf",
+  1: "flmgkflddglfd"
+}
+
+// console.log(something[1]);
+// library.book.array=[];
+// library.book.array.push(
+//  {
+//     reviewer: "Book Critic",
+//     comment: "A comprehensive guide to JavaScript.",
+//   }
+// )
