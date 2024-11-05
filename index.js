@@ -13,12 +13,12 @@ Task 1) Create an object named 'book' using curly braces {} that includes the in
 
 Task 2) Print the book’s title with its publish year. Access the book title using dot-notation, and access the publish year using bracket-notation.
 ******************************************************************/
-const  book= {
-    Title: "JavaScript: The Definitive Guide",
-    Author: "David Flanagan",
-    "Published Year": 2020,
-    Genre: "Programming",
-  };
+const book = {
+  Title: "JavaScript: The Definitive Guide",
+  Author: "David Flanagan",
+  "Published Year": 2020,
+  Genre: "Programming",
+};
 console.log(book.Title);
 console.log(book["Published Year"]);
 console.log(book);
@@ -52,7 +52,7 @@ Task 7) Add a 'reviews' property to the 'book' object, which will store an array
         Start with one review: {reviewer: "Book Critic", comment: "A comprehensive guide to JavaScript."}.
 ******************************************************************/
 book.Author = ["David Flanagan", "Another Author"];
-let reviewer1;
+/*let reviewer1;
 let reviewer2;
 book.reviews=[reviewer1,reviewer2];
 book.reviews[0] = {
@@ -73,7 +73,7 @@ console.log(book);
 const something = {
   0: "dsfdf",
   1: "flmgkflddglfd"
-}
+}*/
 
 // console.log(something[1]);
 // book.array=[];
@@ -83,3 +83,17 @@ const something = {
 //     comment: "A comprehensive guide to JavaScript.",
 //   }
 // )
+
+// FIX : different method to add the reviews
+book.review = [
+  {
+    reviewer: "Book Critic",
+    comment: "A comprehensive guide to JavaScript.",
+  },
+  {
+    reviewer: "bob",
+    comment: "I hate this book",
+  }
+];
+book.review.push({reviewer:"steve",comment:"Idk how to read, this was typed by voice"});
+console.log(book.review);
